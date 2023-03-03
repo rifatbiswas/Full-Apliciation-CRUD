@@ -1,10 +1,19 @@
+import React from 'react';
+import Homepage from "./pages/Homepage.js"
+import 'react-toastify/dist/ReactToastify.css';
+import { Route, Routes } from 'react-router-dom';
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-     <h1>This is my mern project</h1>
+    <div>
+      
+      <toastify/>
+        <Routes>
+          <Route path='/' element={<Homepage/>} />          
+        </Routes> 
     </div>
   );
-}
+};
 
 export default App;

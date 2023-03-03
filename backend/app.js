@@ -41,19 +41,25 @@ mongoose
     .then(()=>{
         app.listen(port, ()=>{
             console.log(`Server Running on port ${port}`);
+            console.log(`Database Connect Success`);
         })
     })
     .catch((err)=> console.log(err.message))
 
 
 
-// //Front End Routin Tagging.....
+//Front End Routin Tagging.....
 // app.use(express.static("frontend/build"))
 // app.get("*",(req,res)=>{
 //     req.sendFile(path.resolve(__dirname,"frontend","build","index.html"))
 // })
 
+//Usining this line in frontend package.json....
+// "proxy":"http://localhost:8000"
+
 //Backed API Routing.........
-app.use("/api/vi",router)
+app.use("/api/v1",router)
+
+
 
 module.exports = app;
