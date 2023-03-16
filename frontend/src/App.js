@@ -1,7 +1,9 @@
 import React from 'react';
-import Homepage from "./pages/Homepage.js"
 import 'react-toastify/dist/ReactToastify.css';
 import { Route, Routes } from 'react-router-dom';
+import CreatePage from './pages/CreatePage';
+import ReadPage from './pages/ReadPage';
+import UpdatePage from './pages/UpdatePage';
 
 
 const App = () => {
@@ -10,7 +12,10 @@ const App = () => {
       
       <toastify/>
         <Routes>
-          <Route path='/' element={<Homepage/>} />          
+            
+          <Route path='/' element={<CreatePage/>} />         
+          <Route path='/create' element={<ReadPage/>} />  
+          <Route path='/update' element={<UpdatePage/>} />  
         </Routes> 
     </div>
   );

@@ -46,7 +46,7 @@ mongoose
     })
     .catch((err)=> console.log(err.message))
 
-
+    app.use("/api/v1",router)
 
 //Front End Routin Tagging.....
 // app.use(express.static("frontend/build"))
@@ -57,8 +57,8 @@ mongoose
 //Usining this line in frontend package.json....
 // "proxy":"http://localhost:8000"
 
-//Backed API Routing.........
-app.use("/api/v1",router)
+
+
 
 
 

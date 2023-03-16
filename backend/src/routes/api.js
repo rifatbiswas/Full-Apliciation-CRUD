@@ -1,6 +1,7 @@
 const express = require("express");
-const ProductController = require("../controller/ProductController.js")
 const router = express.Router();
+const ProductController = require("../controller/ProductController.js")
+
 
 //API Routing.........
 
